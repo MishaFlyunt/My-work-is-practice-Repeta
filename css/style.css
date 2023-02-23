@@ -104,8 +104,21 @@ body {
   color: var(--accent-color);
 }
 .heder-nav {
+  display: flex;
+  margin-left: 70px;
+}
+.main-nav {
+  display: flex;
+  align-items: center;
+}
+.heder-item:not(:last-child) {
+  margin-right: 40px;
 }
 .heder-link {
+  display: block;
+  padding-top: 21px;
+  padding-bottom: 21px;
+
   color: var(--accent-color);
 
   font-weight: 500;
@@ -116,7 +129,12 @@ body {
 .heder-link:focus {
   color: var(--title-text-color);
 }
-.auth {
+.auth-list {
+  display: flex;
+  margin-left: auto;
+}
+.auth-list .auth-item + .auth-item {
+  margin-left: 12px;
 }
 .auth-link {
 }
@@ -146,6 +164,7 @@ body {
   padding-bottom: 120px;
 }
 .features-title {
+  width: 725px;
   margin-top: 0;
   margin-bottom: 60px;
   color: var(--title-text-color);
@@ -155,8 +174,13 @@ body {
   line-height: 1.5;
 }
 .features-list {
+  display: flex;
+  flex-wrap: wrap;
+  margin: -40px -75px;
 }
 .features-item {
+  width: 625px;
+  margin: 40px 75px;
 }
 .features-description {
   color: var(--primery-text-color);
@@ -171,15 +195,31 @@ body {
 }
 .working-list {
 }
-.working-list > .working-item:nth-child(2n) {
-  background-color: var(--secondary-bg-color);
-}
+
 .working-item {
+  display: flex;
+  align-items: center;
   padding-top: 80px;
   padding-bottom: 80px;
 }
+.content {
+  width: 625px;
+}
 .working-description {
   color: var(--primery-text-color);
+}
+.working-list > .working-item:nth-child(2n) {
+  background-color: var(--secondary-bg-color);
+  flex-direction: row-reverse;
+}
+.working-list > .working-item:nth-child(2n + 1).content {
+  margin-left: 84px;
+}
+.working-list > .working-item:nth-child(2n).content {
+  margin-right: 84px;
+}
+.working-list img {
+  display: block;
 }
 
 /* ----------Gallery--------- */
@@ -199,10 +239,18 @@ body {
 }
 .gallery-description {
   margin-bottom: 80px;
+  text-align: center;
 }
 .gallery-list {
+  display: flex;
+  flex-wrap: wrap;
+  width: 1020px;
+  margin: -30px -40px;
+  margin-left: auto;
+  margin-right: auto;
 }
 .gallery-item {
+    margin: 30px 40px;
 }
 .gallery-link {
 }
